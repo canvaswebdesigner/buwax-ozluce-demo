@@ -21,7 +21,18 @@ npm run check
 npm run dev
 ```
 
-`dist/` Cloudflare Pages'e yayınlanır. Build yalnız statik dosyaları kopyalar. GitHub kaynak kodu ve Cloudflare yayın kanıtı, tamamlandığında yerel QA/YAYIN kaydına eklenir.
+`dist/` Cloudflare Pages'e yayınlanır. Build yalnız statik dosyaları kopyalar.
+
+## Canlı ön izleme ve kaynak
+
+- [Cloudflare Pages ön izlemesi](https://buwax-ozluce-demo.pages.dev/)
+- [GitHub kaynak kodu](https://github.com/canvaswebdesigner/buwax-ozluce-demo), dal: `codex/buwax-preview`
+- [Canvas Web portföyü](https://github.com/canvaswebdesigner)
+- Kaynak GitHub'a gönderilmiş, derlenen statik dosyalar mevcut Cloudflare yetkisiyle doğrudan yüklenmiştir. GitHub'dan otomatik dağıtım/CI kurulmamıştır.
+- Yayın için: `npm run check`, ardından `wrangler pages deploy dist --project-name buwax-ozluce-demo --branch codex/buwax-preview`.
+- Canlı yayında 13 viewport boyutunda yatay taşma görülmedi. Bu, fiziksel telefon veya Safari/DPI doğrulaması değildir.
+- Galeri, fare tekerleğiyle zoom/arka plan kilidi, beş hizmet penceresi, mobil menü ve teklif bölümüne geçiş tarayıcıda kontrol edildi. WhatsApp mesajını gönderme işlemi yapılmadı.
+- 8 birim testi geçti; ana sayfa ve 10 dosya HTTP 200, bilinmeyen yol HTTP 404 döndü. Canlı dosyaların SHA-256 özetleri yerel dağıtımla eşleşti.
 
 ## Kaynaklar
 
