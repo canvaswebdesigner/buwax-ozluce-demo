@@ -16,6 +16,8 @@ Resmî işletme sitesi veya ücretli müşteri işi değildir. Kullanıcının t
 
 Node.js 22 veya üzeri; uygulamada ek bağımlılık yoktur.
 
+Bu çalışma alanında `pnpm run check` ile 8 test ve statik build doğrulandı; aşağıdaki npm komutları da aynı package.json scriptlerini kullanır. İç içe çalışma alanındaki başka projenin Wrangler ayarına gitmemesi için yerel `.wrangler/deploy/config.json`, `../../wrangler.toml` dosyasına yönlendirilmiştir; bu yerel metadata depoya alınmaz.
+
 ```sh
 npm run check
 npm run dev
